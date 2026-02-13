@@ -24,14 +24,11 @@ jobs:
         with:
           version: 8
 
-      - name: Setup Rust stable
+      - name: Setup Rust
         uses: dtolnay/rust-toolchain@stable
 
-      - name: Setup Rust nightly
-        uses: dtolnay/rust-toolchain@nightly
-
-      - name: Add Windows 7 target
-        run: rustup target add x86_64-win7-windows-msvc --toolchain nightly
+      - name: Install Rust build-std components
+        run: rustup component add rust-src --toolchain stable
 
       - name: Install frontend dependencies
         run: pnpm install
@@ -39,32 +36,17 @@ jobs:
       - name: Build Nuxt application
         run: pnpm build
 
-      - name: Build Windows 7 version
-        run: |
-          rustup default nightly
-          pnpm tauri build -- -Z build-std --target x86_64-win7-windows-msvc
-
-      - name: Build standard Windows version
-        run: |
-          rustup default stable
-          pnpm tauri build
+      - name: Build Tauri application (standard Windows version)
+        run: pnpm tauri build
 
       - name: Copy additional files to release directory
         run: |
           xcopy /s /y /i src-tauri\easytier src-tauri\target\release\easytier
-          xcopy /y src-tauri\帮助.txt src-tauri\target\release\帮助.txt
-          xcopy /y src-tauri\uninstall.exe src-tauri\target\release\uninstall.exe
+          xcopy /y src-tauri\帮助.txt src-tauri\target\release\帮助.txt*
+          xcopy /y src-tauri\uninstall.exe src-tauri\target\release\uninstall.exe*
 
-      - name: Copy additional files to Windows 7 release directory
-        run: |
-          xcopy /y src-tauri\帮助.txt src-tauri\target\x86_64-win7-windows-msvc\release\帮助.txt
-          xcopy /y src-tauri\uninstall.exe src-tauri\target\x86_64-win7-windows-msvc\release\uninstall.exe
-          xcopy /s /y /i src-tauri\easytier src-tauri\target\x86_64-win7-windows-msvc\release\easytier
-
-      - name: Create release packages
-        run: |
-          pnpm run release
-          pnpm run release-win7
+      - name: Create standard Windows release package
+        run: pnpm run release
 
       - name: Upload standard Windows artifact
         uses: actions/upload-artifact@v4
@@ -72,19 +54,12 @@ jobs:
           name: easytier-game-windows-x64
           path: release/easytier-game_windows_x86_64_*.zip
 
-      - name: Upload Windows 7 artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: easytier-game-windows7
-          path: release/easytier-game_windows7_fix_*.zip
-
-      - name: Create GitHub Release
+      - name: Upload to GitHub Release
         if: startsWith(github.ref, 'refs/tags/')
         uses: softprops/action-gh-release@v1
         with:
           files: |
             release/easytier-game_windows_x86_64_*.zip
-            release/easytier-game_windows7_fix_*.zip
           draft: true
           generate_release_notes: true
         env:
