@@ -30,55 +30,70 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          prs=$(gh pr list --author "app/dependabot" --json number,title,url,labels --limit 100)
-          echo "prs=$prs" >> $GITHUB_OUTPUT
+          prs=$(gh pr list --author "app/dependabot" --json number,title,url --limit 100)
+          echo "prs<<EOF" >> $GITHUB_OUTPUT
+          echo "$prs" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
           echo "找到的 Dependabot PR:"
           echo "$prs" | jq -r '.[] | "\(.number): \(.title)"'
 
-      - name: Merge patch updates
-        if: inputs.update_type == 'patch-only' || inputs.update_type == 'patch-and-minor' || inputs.update_type == 'all'
+      - name: Merge Dependabot PRs
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          UPDATE_TYPE: ${{ inputs.update_type }}
         run: |
-          echo "${{ steps.get-prs.outputs.prs }}" | jq -r '.[] | select(.labels[].name | contains("dependencies")) | .number' | while read pr_number; do
+          echo '${{ steps.get-prs.outputs.prs }}' | jq -r '.[].number' | while read pr_number; do
+            if [ -z "$pr_number" ]; then
+              continue
+            fi
+            
             echo "正在处理 PR #$pr_number"
             
-            # 获取 PR 详情
-            pr_info=$(gh pr view $pr_number --json title)
-            pr_title=$(echo "$pr_info" | jq -r '.title')
+            # 获取 PR 标题
+            pr_title=$(gh pr view $pr_number --json title --jq '.title')
+            echo "PR 标题: $pr_title"
             
-            # 判断是否为 patch 更新
-            if [[ "$pr_title" == *"patch"* ]] || [[ "$pr_title" =~ [0-9]+\.[0-9]+\.[0-9]+ ]]; then
-              echo "✅ 合并 patch 更新: PR #$pr_number"
-              gh pr review $pr_number --approve || true
-              gh pr merge $pr_number --squash --auto || echo "⚠️ PR #$pr_number 无法自动合并"
+            should_merge=false
+            
+            # 根据更新类型判断是否合并
+            if [ "$UPDATE_TYPE" = "all" ]; then
+              should_merge=true
+              echo "✅ 模式: 合并所有更新"
+            elif [ "$UPDATE_TYPE" = "patch-only" ]; then
+              # 检查是否包含 patch 关键词或版本号模式
+              if echo "$pr_title" | grep -qiE "(patch|[0-9]+\.[0-9]+\.[0-9]+)"; then
+                should_merge=true
+                echo "✅ 检测到 patch 更新"
+              fi
+            elif [ "$UPDATE_TYPE" = "patch-and-minor" ]; then
+              # 排除 major 更新
+              if ! echo "$pr_title" | grep -qiE "(major|breaking)"; then
+                should_merge=true
+                echo "✅ 检测到 patch 或 minor 更新"
+              fi
+            fi
+            
+            # 执行合并
+            if [ "$should_merge" = true ]; then
+              echo "🔄 审批并合并 PR #$pr_number"
+              gh pr review $pr_number --approve || echo "⚠️ 审批失败，可能已审批"
+              gh pr merge $pr_number --squash --auto || echo "⚠️ PR #$pr_number 无法自动合并（可能有冲突）"
+              echo "---"
+            else
+              echo "⏭️ 跳过 PR #$pr_number (不符合合并条件)"
+              echo "---"
             fi
           done
+          
+          echo "✅ 批量合并完成！"
 
-      - name: Merge minor updates
-        if: inputs.update_type == 'patch-and-minor' || inputs.update_type == 'all'
+      - name: Summary
+        run: |
+          echo "### 批量合并结果 🎉" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- 合并策略: ${{ inputs.update_type }}" >> $GITHUB_STEP_SUMMARY
+          echo "- 已处理的 PR 数量: $(gh pr list --author 'app/dependabot' --state merged --limit 100 --json number | jq '. | length')" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "查看所有 Dependabot PR: https://github.com/${{ github.repository }}/pulls?q=is%3Apr+author%3Aapp%2Fdependabot" >> $GITHUB_STEP_SUMMARY
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          echo "${{ steps.get-prs.outputs.prs }}" | jq -r '.[] | select(.labels[].name | contains("dependencies")) | .number' | while read pr_number; do
-            pr_info=$(gh pr view $pr_number --json title)
-            pr_title=$(echo "$pr_info" | jq -r '.title')
-            
-            # 判断是否为 minor 更新 (非 major)
-            if [[ ! "$pr_title" =~ "major" ]] && [[ ! "$pr_title" =~ "breaking" ]]; then
-              echo "✅ 合并 minor 更新: PR #$pr_number"
-              gh pr review $pr_number --approve || true
-              gh pr merge $pr_number --squash --auto || echo "⚠️ PR #$pr_number 无法自动合并"
-            fi
-          done
-
-      - name: Merge all updates
-        if: inputs.update_type == 'all'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          echo "${{ steps.get-prs.outputs.prs }}" | jq -r '.[] | .number' | while read pr_number; do
-            echo "✅ 合并所有更新: PR #$pr_number"
-            gh pr review $pr_number --approve || true
-            gh pr merge $pr_number --squash --auto || echo "⚠️ PR #$pr_number 无法自动合并"
-          done
