@@ -29,7 +29,8 @@ use windows::Win32::System::Power::{
     ES_CONTINUOUS, ES_DISPLAY_REQUIRED, ES_SYSTEM_REQUIRED, EXECUTION_STATE,
 };
 
-use rand::Rng;
+// use rand::Rng;
+use rand::{Rng, RngExt};
 use tokio::process::Command as tokioCommand;
 
 #[tauri::command(rename_all = "snake_case")]
