@@ -102,7 +102,7 @@ fn generate_random_user_agent() -> String {
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:{version}) Gecko/20100101 Firefox/{version}",
     ];
 
-    let mut rng = rand::rng();
+    // let mut rng = rand::rng();
     // let template = user_agents[rng.random_range(0..user_agents.len())];
     let template = user_agents[random_range(0..user_agents.len())];
 
