@@ -1,3 +1,4 @@
+use encoding_rs::GBK;
 use reqwest::{Client, Error};
 // use futures_util::StreamExt;
 use serde::{Deserialize};
@@ -29,9 +30,19 @@ use windows::Win32::System::Power::{
     ES_CONTINUOUS, ES_DISPLAY_REQUIRED, ES_SYSTEM_REQUIRED, EXECUTION_STATE,
 };
 
-// use rand::Rng;
-use rand::{Rng, RngExt};
+use rand::Rng;
 use tokio::process::Command as tokioCommand;
+
+#[cfg(target_os = "windows")]
+fn decode_windows_output(bytes: &[u8]) -> String {
+    let (decoded, _, _) = GBK.decode(bytes);
+    decoded.into_owned()
+}
+
+#[cfg(not(target_os = "windows"))]
+fn decode_windows_output(bytes: &[u8]) -> String {
+    String::from_utf8_lossy(bytes).into_owned()
+}
 
 #[tauri::command(rename_all = "snake_case")]
 fn get_network_adapter_guids() -> Vec<[String; 2]> {
@@ -91,12 +102,16 @@ fn generate_random_user_agent() -> String {
     ];
 
     let mut rng = rand::rng();
-    let template = user_agents[rng.random_range(0..user_agents.len())];
+    // let template = user_agents[rng.random_range(0..user_agents.len())];
+    let template = user_agents[rng.gen_range(0..user_agents.len())];
 
     // 生成随机版本号
-    let version_major: u8 = rng.random_range(70..90);
-    let version_minor: u8 = rng.random_range(0..10);
-    let version_patch: u8 = rng.random_range(0..10);
+    // let version_major: u8 = rng.random_range(70..90);
+    // let version_minor: u8 = rng.random_range(0..10);
+    // let version_patch: u8 = rng.random_range(0..10);
+    let version_major: u8 = rng.gen_range(70..90);
+    let version_minor: u8 = rng.gen_range(0..10);
+    let version_patch: u8 = rng.gen_range(0..10);
     let version = format!("{}.{}.{}", version_major, version_minor, version_patch);
 
     // 替换模板中的版本号占位符
@@ -204,7 +219,7 @@ fn get_core_version() -> String {
         .output()
     {
         Ok(output) => {
-            let output_str = String::from_utf8_lossy(&output.stdout);
+            let output_str = decode_windows_output(&output.stdout);
             return output_str.trim().to_string();
         }
         Err(_e) => {
@@ -224,7 +239,7 @@ fn get_core_version() -> String {
 //         .output()
 //     {
 //         Ok(output) => {
-//             let output_str = String::from_utf8_lossy(&output.stdout);
+//             let output_str = decode_windows_output(&output.stdout);
 //             return output_str.trim().to_string();
 //         }
 //         Err(_e) => return "".to_string(),
@@ -253,10 +268,10 @@ async fn get_members_by_cli() -> String {
     {
         Ok(output) => {
             if output.status.success() {
-                let output_str = String::from_utf8_lossy(&output.stdout);
+                let output_str = decode_windows_output(&output.stdout);
                 return output_str.trim().to_string();
             } else {
-                let output_str = String::from_utf8_lossy(&output.stderr);
+                let output_str = decode_windows_output(&output.stderr);
                 log::error!("{}", output_str.trim().to_string());
                 return "_EasytierGameCliFailedToConnect_".to_string();
             }
@@ -281,10 +296,10 @@ async fn get_members_proxy() -> String {
     {
         Ok(output) => {
             if output.status.success() {
-                let output_str = String::from_utf8_lossy(&output.stdout);
+                let output_str = decode_windows_output(&output.stdout);
                 return output_str.trim().to_string();
             } else {
-                let output_str = String::from_utf8_lossy(&output.stderr);
+                let output_str = decode_windows_output(&output.stderr);
                 log::error!("{}", output_str.trim().to_string());
                 return "_EasytierGameCliFailedToGetProxy_".to_string();
             }
@@ -310,10 +325,10 @@ async fn get_members_connections_cli() -> String {
     {
         Ok(output) => {
             if output.status.success() {
-                let output_str = String::from_utf8_lossy(&output.stdout);
+                let output_str = decode_windows_output(&output.stdout);
                 return output_str.trim().to_string();
             } else {
-                let output_str = String::from_utf8_lossy(&output.stderr);
+                let output_str = decode_windows_output(&output.stderr);
                 log::error!("{}", output_str.trim().to_string());
                 return "_EasytierGameCliFailedToGetConnections_".to_string();
             }
@@ -338,10 +353,10 @@ async fn get_route_by_cli() -> String {
     {
         Ok(output) => {
             if output.status.success() {
-                let output_str = String::from_utf8_lossy(&output.stdout);
+                let output_str = decode_windows_output(&output.stdout);
                 return output_str.trim().to_string();
             } else {
-                let output_str = String::from_utf8_lossy(&output.stderr);
+                let output_str = decode_windows_output(&output.stderr);
                 log::error!("{}", output_str.trim().to_string());
                 return "_EasytierGameCliFailedToConnect_".to_string();
             }
