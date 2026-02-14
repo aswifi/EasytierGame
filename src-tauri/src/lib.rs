@@ -30,7 +30,8 @@ use windows::Win32::System::Power::{
     ES_CONTINUOUS, ES_DISPLAY_REQUIRED, ES_SYSTEM_REQUIRED, EXECUTION_STATE,
 };
 
-use rand::Rng;
+// use rand::Rng;
+use rand::random_range;
 use tokio::process::Command as tokioCommand;
 
 #[cfg(target_os = "windows")]
@@ -103,15 +104,15 @@ fn generate_random_user_agent() -> String {
 
     let mut rng = rand::rng();
     // let template = user_agents[rng.random_range(0..user_agents.len())];
-    let template = user_agents[rng.gen_range(0..user_agents.len())];
+    let template = user_agents[random_range(0..user_agents.len())];
 
     // 生成随机版本号
     // let version_major: u8 = rng.random_range(70..90);
     // let version_minor: u8 = rng.random_range(0..10);
     // let version_patch: u8 = rng.random_range(0..10);
-    let version_major: u8 = rng.gen_range(70..90);
-    let version_minor: u8 = rng.gen_range(0..10);
-    let version_patch: u8 = rng.gen_range(0..10);
+    let version_major: u8 = random_range(70..90);
+    let version_minor: u8 = random_range(0..10);
+    let version_patch: u8 = random_range(0..10);
     let version = format!("{}.{}.{}", version_major, version_minor, version_patch);
 
     // 替换模板中的版本号占位符
