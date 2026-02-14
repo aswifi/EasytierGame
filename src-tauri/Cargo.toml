@@ -38,7 +38,7 @@ tauri-plugin-log = "2.8.0"
 tauri-plugin-shell = "2.3.5"
 reqwest = { version = "0.12.12", features = ["json"] }
 zip = "2.2.3"
-sysinfo = '0.33.1'
+sysinfo = '0.38.0'
 # planif = { git = "https://github.com/mattrobineau/planif", tag = "1.0.1" }
 whoami = "1.5.2"
 tauri-plugin-fs = "2.4.5"
