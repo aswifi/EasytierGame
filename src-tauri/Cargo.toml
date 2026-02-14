@@ -48,7 +48,7 @@ tokio = { version = "1.45.1", features = ["process"] }
 tauri-plugin-dialog = "2.4.0"
 # prost = "0.13"
 # prost-types = "0.13"
-hashbrown = "0.15.2"
+hashbrown = "0.16.1"
 # futures-util = "0.3"
 
 [dependencies.windows]
