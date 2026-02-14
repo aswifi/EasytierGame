@@ -1,0 +1,73 @@
+version: 2
+updates:
+  # 更新 npm/pnpm 依赖
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Asia/Shanghai"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "javascript"
+    commit-message:
+      prefix: "chore(deps)"
+      include: "scope"
+    groups:
+      # 将小版本和补丁更新分组
+      minor-and-patch:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
+      # Tauri 相关依赖单独分组
+      tauri-deps:
+        patterns:
+          - "@tauri-apps/*"
+          - "tauri-plugin-*"
+        update-types:
+          - "minor"
+          - "patch"
+          - "major"
+
+  # 更新 Rust (Cargo) 依赖
+  - package-ecosystem: "cargo"
+    directory: "/src-tauri"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Asia/Shanghai"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "rust"
+    commit-message:
+      prefix: "chore(deps)"
+      include: "scope"
+    groups:
+      # Tauri 相关依赖分组
+      tauri-rust-deps:
+        patterns:
+          - "tauri*"
+        update-types:
+          - "minor"
+          - "patch"
+          - "major"
+
+  # 更新 GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Asia/Shanghai"
+    labels:
+      - "dependencies"
+      - "github-actions"
+    commit-message:
+      prefix: "chore(ci)"
