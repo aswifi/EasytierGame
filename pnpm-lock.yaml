@@ -17,19 +17,19 @@ importers:
         version: 2.3.2(vue@3.5.28)
       '@element-plus/nuxt':
         specifier: 1.1.5
-        version: 1.1.5(@element-plus/icons-vue@2.3.2(vue@3.5.28))(element-plus@2.13.2(vue@3.5.28))(magicast@0.5.2)
+        version: 1.1.5(@element-plus/icons-vue@2.3.2(vue@3.5.28))(element-plus@2.13.3(vue@3.5.28))(magicast@0.5.2)
       '@nuxtjs/tailwindcss':
         specifier: 6.14.0
         version: 6.14.0(magicast@0.5.2)(yaml@2.8.2)
       '@oxc-minify/binding-win32-x64-msvc':
-        specifier: ^0.114.0
-        version: 0.114.0
+        specifier: ^0.115.0
+        version: 0.115.0
       '@oxc-parser/binding-win32-x64-msvc':
-        specifier: ^0.114.0
-        version: 0.114.0
+        specifier: ^0.115.0
+        version: 0.115.0
       '@oxc-transform/binding-win32-x64-msvc':
-        specifier: ^0.114.0
-        version: 0.114.0
+        specifier: ^0.115.0
+        version: 0.115.0
       '@pinia/nuxt':
         specifier: 0.11.3
         version: 0.11.3(magicast@0.5.2)(pinia@3.0.4(vue@3.5.28))
@@ -73,8 +73,8 @@ importers:
         specifier: 7.0.1
         version: 7.0.1
       element-plus:
-        specifier: 2.13.2
-        version: 2.13.2(vue@3.5.28)
+        specifier: 2.13.3
+        version: 2.13.3(vue@3.5.28)
       less:
         specifier: 4.5.1
         version: 4.5.1
@@ -710,8 +710,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@oxc-minify/binding-win32-x64-msvc@0.114.0':
-    resolution: {integrity: sha512-51WkZSVoOxM/0KzX++STBSHvvxN5Y6swGMEaxyfAfhUgPkVlDMIdHfcplzPqFhYIxK+HcBddwvSE9qc2XToTsw==}
+  '@oxc-minify/binding-win32-x64-msvc@0.115.0':
+    resolution: {integrity: sha512-7jkkmwVw1eCupOwas4C6AkwJiiSTpLCM4DFraG3b7hWUAWVFHmeWfO25Fwt4psbdJg2aOL5jiQjJUFLWhNqzSw==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [win32]
@@ -835,8 +835,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@oxc-parser/binding-win32-x64-msvc@0.114.0':
-    resolution: {integrity: sha512-ATX7ZOUS/FP2vy9ey0FALKFPJDnN3uoEKSCTxH10vTNoREL1D5SIrxfTJcChTWqc4yhed//BrmBCgv+3EvU3VQ==}
+  '@oxc-parser/binding-win32-x64-msvc@0.115.0':
+    resolution: {integrity: sha512-oxUl82N+fIO9jIaXPph8SPPHQXrA08BHokBBJW8ct9F/x6o6bZE6eUAhUtWajbtvFhL8UYcCWRMba+kww6MBlA==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [win32]
@@ -963,8 +963,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@oxc-transform/binding-win32-x64-msvc@0.114.0':
-    resolution: {integrity: sha512-hkDBn4l8dc0t3mpEI0BQhzHN7KdgUoXJhsw6VWsUlewMIICc4pL38MS9ke/PenU4O9Z0L8AePWJ5IYub+gNVgg==}
+  '@oxc-transform/binding-win32-x64-msvc@0.115.0':
+    resolution: {integrity: sha512-ZkD1mNE/Glts01TGIuCXbGXmf1mkZ/uk9MIWfCQCSSgn9CV2iICHpSoSn5h5FTdDQ3df+KI5GKehSe0sDhNvww==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [win32]
@@ -1402,8 +1402,8 @@ packages:
   '@types/lodash@4.17.21':
     resolution: {integrity: sha512-FOvQ0YPD5NOfPgMzJihoT+Za5pdkDJWcbpuj1DjaKZIr/gxodQjY/uWEFlTNqW2ugXHUiL8lRQgw63dzKHZdeQ==}
 
-  '@types/lodash@4.17.23':
-    resolution: {integrity: sha512-RDvF6wTulMPjrNdCoYRC8gNR880JNGT8uB+REUpC2Ns4pRqQJhGz90wh7rgdXDPpCczF3VGktDuFGVnz8zP7HA==}
+  '@types/lodash@4.17.24':
+    resolution: {integrity: sha512-gIW7lQLZbue7lRSWEFql49QJJWThrTFFeIMJdp3eH4tKoxm1OvEPg02rm4wCCSHS0cL3/Fizimb35b7k8atwsQ==}
 
   '@types/resolve@1.20.2':
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
@@ -2102,8 +2102,8 @@ packages:
   electron-to-chromium@1.5.286:
     resolution: {integrity: sha512-9tfDXhJ4RKFNerfjdCcZfufu49vg620741MNs26a9+bhLThdB+plgMeou98CAaHu/WATj2iHOOHTp1hWtABj2A==}
 
-  element-plus@2.13.2:
-    resolution: {integrity: sha512-Zjzm1NnFXGhV4LYZ6Ze9skPlYi2B4KAmN18FL63A3PZcjhDfroHwhtM6RE8BonlOPHXUnPQynH0BgaoEfvhrGw==}
+  element-plus@2.13.3:
+    resolution: {integrity: sha512-RwLVtFpeHjZ4UCtHxVi1/sGR2cr2xOL7hqWa7qJc/+gdO6QavVG8Nw1C647obCb3tIg2ztMhNbIIjZUv+6z1og==}
     peerDependencies:
       vue: ^3.3.0
 
@@ -3842,6 +3842,7 @@ packages:
 
   unplugin-vue-router@0.19.2:
     resolution: {integrity: sha512-u5dgLBarxE5cyDK/hzJGfpCTLIAyiTXGlo85COuD4Nssj6G7NxS+i9mhCWz/1p/ud1eMwdcUbTXehQe41jYZUA==}
+    deprecated: 'Merged into vuejs/router. Migrate: https://router.vuejs.org/guide/migration/v4-to-v5.html'
     peerDependencies:
       '@vue/compiler-sfc': ^3.5.17
       vue-router: ^4.6.0
@@ -4386,11 +4387,11 @@ snapshots:
     dependencies:
       vue: 3.5.28
 
-  '@element-plus/nuxt@1.1.5(@element-plus/icons-vue@2.3.2(vue@3.5.28))(element-plus@2.13.2(vue@3.5.28))(magicast@0.5.2)':
+  '@element-plus/nuxt@1.1.5(@element-plus/icons-vue@2.3.2(vue@3.5.28))(element-plus@2.13.3(vue@3.5.28))(magicast@0.5.2)':
     dependencies:
       '@element-plus/icons-vue': 2.3.2(vue@3.5.28)
       '@nuxt/kit': 4.3.1(magicast@0.5.2)
-      element-plus: 2.13.2(vue@3.5.28)
+      element-plus: 2.13.3(vue@3.5.28)
       magic-string: 0.30.21
       unplugin: 3.0.0
     transitivePeerDependencies:
@@ -4969,7 +4970,7 @@ snapshots:
   '@oxc-minify/binding-win32-x64-msvc@0.112.0':
     optional: true
 
-  '@oxc-minify/binding-win32-x64-msvc@0.114.0': {}
+  '@oxc-minify/binding-win32-x64-msvc@0.115.0': {}
 
   '@oxc-parser/binding-android-arm-eabi@0.112.0':
     optional: true
@@ -5033,7 +5034,7 @@ snapshots:
   '@oxc-parser/binding-win32-x64-msvc@0.112.0':
     optional: true
 
-  '@oxc-parser/binding-win32-x64-msvc@0.114.0': {}
+  '@oxc-parser/binding-win32-x64-msvc@0.115.0': {}
 
   '@oxc-project/types@0.112.0': {}
 
@@ -5099,7 +5100,7 @@ snapshots:
   '@oxc-transform/binding-win32-x64-msvc@0.112.0':
     optional: true
 
-  '@oxc-transform/binding-win32-x64-msvc@0.114.0': {}
+  '@oxc-transform/binding-win32-x64-msvc@0.115.0': {}
 
   '@parcel/watcher-android-arm64@2.5.6':
     optional: true
@@ -5430,7 +5431,7 @@ snapshots:
 
   '@types/lodash@4.17.21': {}
 
-  '@types/lodash@4.17.23': {}
+  '@types/lodash@4.17.24': {}
 
   '@types/resolve@1.20.2': {}
 
@@ -6175,13 +6176,13 @@ snapshots:
 
   electron-to-chromium@1.5.286: {}
 
-  element-plus@2.13.2(vue@3.5.28):
+  element-plus@2.13.3(vue@3.5.28):
     dependencies:
       '@ctrl/tinycolor': 3.6.1
       '@element-plus/icons-vue': 2.3.2(vue@3.5.28)
       '@floating-ui/dom': 1.7.5
       '@popperjs/core': '@sxzz/popperjs-es@2.11.8'
-      '@types/lodash': 4.17.23
+      '@types/lodash': 4.17.24
       '@types/lodash-es': 4.17.12
       '@vueuse/core': 10.11.1(vue@3.5.28)
       async-validator: 4.2.5
