@@ -49,7 +49,7 @@ jobs:
         run: pnpm run release
 
       - name: Upload standard Windows artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: easytier-game-windows-x64
           path: release/easytier-game_windows_x86_64_*.zip
