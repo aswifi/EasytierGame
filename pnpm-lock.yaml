@@ -22,14 +22,14 @@ importers:
         specifier: 6.14.0
         version: 6.14.0(magicast@0.5.2)(yaml@2.8.2)
       '@oxc-minify/binding-win32-x64-msvc':
-        specifier: ^0.121.0
-        version: 0.121.0
+        specifier: ^0.123.0
+        version: 0.123.0
       '@oxc-parser/binding-win32-x64-msvc':
-        specifier: ^0.121.0
-        version: 0.121.0
+        specifier: ^0.123.0
+        version: 0.123.0
       '@oxc-transform/binding-win32-x64-msvc':
-        specifier: ^0.121.0
-        version: 0.121.0
+        specifier: ^0.123.0
+        version: 0.123.0
       '@pinia/nuxt':
         specifier: 0.11.3
         version: 0.11.3(magicast@0.5.2)(pinia@3.0.4(typescript@5.9.3)(vue@3.5.30(typescript@5.9.3)))
@@ -79,8 +79,8 @@ importers:
         specifier: 4.6.4
         version: 4.6.4
       lodash-es:
-        specifier: 4.17.23
-        version: 4.17.23
+        specifier: 4.18.1
+        version: 4.18.1
       nuxt:
         specifier: 4.4.2
         version: 4.4.2(@babel/core@7.29.0)(@babel/plugin-syntax-jsx@7.28.6(@babel/core@7.29.0))(@parcel/watcher@2.5.6)(@vue/compiler-sfc@3.5.30)(cac@6.7.14)(db0@0.3.4)(ioredis@5.10.0)(less@4.6.4)(magicast@0.5.2)(pinia@3.0.4(typescript@5.9.3)(vue@3.5.30(typescript@5.9.3)))(rollup-plugin-visualizer@6.0.11(rollup@4.59.0))(rollup@4.59.0)(terser@5.46.0)(typescript@5.9.3)(vite@7.3.1(jiti@2.6.1)(less@4.6.4)(terser@5.46.0)(yaml@2.8.2))(yaml@2.8.2)
@@ -728,8 +728,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@oxc-minify/binding-win32-x64-msvc@0.121.0':
-    resolution: {integrity: sha512-/0qRGvYnBVhzwSXHcJ6sF+2rb2QpotbJeAr1wmADgq/hm7JjdRukktngmwXQuIILmC+UELYLoVpa0PTBoEqwrg==}
+  '@oxc-minify/binding-win32-x64-msvc@0.123.0':
+    resolution: {integrity: sha512-pd8FPJY2xySZ9FJRJtk8691aC4ZahB3kCt7KcvcuglRklP5U5aHFKNPNHiwz2z9GXH5emyJ1iJf3T7NOIVLPgQ==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [win32]
@@ -853,8 +853,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@oxc-parser/binding-win32-x64-msvc@0.121.0':
-    resolution: {integrity: sha512-BOp1KCzdboB1tPqoCPXgntgFs0jjeSyOXHzgxVFR7B/qfr3F8r4YDacHkTOUNXtDgM8YwKnkf3rE5gwALYX7NA==}
+  '@oxc-parser/binding-win32-x64-msvc@0.123.0':
+    resolution: {integrity: sha512-q7RZvglQvGo3RX5ljtcGSabu2B2c0oDU/6xC3sBMhsV5KRo0PvyxLdordbEN31NTfuZu4Sgl86C76cAURZIHWA==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [win32]
@@ -981,8 +981,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@oxc-transform/binding-win32-x64-msvc@0.121.0':
-    resolution: {integrity: sha512-vV/rzJsmJeeXI1q/xuy93PnoL/IYMwCCyYMX9MmIgMx2a4Lu3vIjUNBLJx1R5CqP/NnvAelsuz05sKlO017FmQ==}
+  '@oxc-transform/binding-win32-x64-msvc@0.123.0':
+    resolution: {integrity: sha512-pVmtG6GGI3eZ5J4NP75rR5yA1EuwEq+94kBQipq1rZXsukj6ghNkd3OGgzOA+W/fQL3V9AlnY9BriqCT21eVQw==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [win32]
@@ -2667,8 +2667,8 @@ packages:
     resolution: {integrity: sha512-arhlxbFRmoQHl33a0Zkle/YWlmNwoyt6QNZEIJcqNbdrsix5Lvc4HyyI3EnwxTYlZYc32EbYrQ8SzEZ7dqgg9A==}
     engines: {node: '>=14'}
 
-  lodash-es@4.17.23:
-    resolution: {integrity: sha512-kVI48u3PZr38HdYz98UmfPnXl2DXrpdctLrFLCd3kOx1xUkOmpFPx7gCWWM5MPkL/fD8zb+Ph0QzjGFs4+hHWg==}
+  lodash-es@4.18.1:
+    resolution: {integrity: sha512-J8xewKD/Gk22OZbhpOVSwcs60zhd95ESDwezOFuA3/099925PdHJ7OFHNTGtajL3AlZkykD32HykiMo+BIBI8A==}
 
   lodash-unified@1.0.3:
     resolution: {integrity: sha512-WK9qSozxXOD7ZJQlpSqOT+om2ZfcT4yO+03FuzAHD0wF6S0l0090LRPDx3vhTTLZ8cFKpBn+IOcVXK6qOcIlfQ==}
@@ -5010,7 +5010,7 @@ snapshots:
   '@oxc-minify/binding-win32-x64-msvc@0.117.0':
     optional: true
 
-  '@oxc-minify/binding-win32-x64-msvc@0.121.0': {}
+  '@oxc-minify/binding-win32-x64-msvc@0.123.0': {}
 
   '@oxc-parser/binding-android-arm-eabi@0.117.0':
     optional: true
@@ -5074,7 +5074,7 @@ snapshots:
   '@oxc-parser/binding-win32-x64-msvc@0.117.0':
     optional: true
 
-  '@oxc-parser/binding-win32-x64-msvc@0.121.0': {}
+  '@oxc-parser/binding-win32-x64-msvc@0.123.0': {}
 
   '@oxc-project/types@0.117.0': {}
 
@@ -5140,7 +5140,7 @@ snapshots:
   '@oxc-transform/binding-win32-x64-msvc@0.117.0':
     optional: true
 
-  '@oxc-transform/binding-win32-x64-msvc@0.121.0': {}
+  '@oxc-transform/binding-win32-x64-msvc@0.123.0': {}
 
   '@parcel/watcher-android-arm64@2.5.6':
     optional: true
@@ -6206,8 +6206,8 @@ snapshots:
       async-validator: 4.2.5
       dayjs: 1.11.20
       lodash: 4.17.23
-      lodash-es: 4.17.23
-      lodash-unified: 1.0.3(@types/lodash-es@4.17.12)(lodash-es@4.17.23)(lodash@4.17.23)
+      lodash-es: 4.18.1
+      lodash-unified: 1.0.3(@types/lodash-es@4.17.12)(lodash-es@4.18.1)(lodash@4.17.23)
       memoize-one: 6.0.0
       normalize-wheel-es: 1.2.0
       vue: 3.5.30(typescript@5.9.3)
@@ -6818,13 +6818,13 @@ snapshots:
       pkg-types: 2.3.0
       quansync: 0.2.11
 
-  lodash-es@4.17.23: {}
+  lodash-es@4.18.1: {}
 
-  lodash-unified@1.0.3(@types/lodash-es@4.17.12)(lodash-es@4.17.23)(lodash@4.17.23):
+  lodash-unified@1.0.3(@types/lodash-es@4.17.12)(lodash-es@4.18.1)(lodash@4.17.23):
     dependencies:
       '@types/lodash-es': 4.17.12
       lodash: 4.17.23
-      lodash-es: 4.17.23
+      lodash-es: 4.18.1
 
   lodash.defaults@4.2.0: {}
 
