@@ -17,19 +17,19 @@ importers:
         version: 2.3.2(vue@3.5.34(typescript@5.9.3))
       '@element-plus/nuxt':
         specifier: 1.1.5
-        version: 1.1.5(@element-plus/icons-vue@2.3.2(vue@3.5.34(typescript@5.9.3)))(element-plus@2.14.0(vue@3.5.34(typescript@5.9.3)))(magicast@0.5.3)
+        version: 1.1.5(@element-plus/icons-vue@2.3.2(vue@3.5.34(typescript@5.9.3)))(element-plus@2.14.1(vue@3.5.34(typescript@5.9.3)))(magicast@0.5.3)
       '@nuxtjs/tailwindcss':
         specifier: 6.14.0
         version: 6.14.0(magicast@0.5.3)(yaml@2.9.0)
       '@oxc-minify/binding-win32-x64-msvc':
-        specifier: ^0.132.0
-        version: 0.132.0
+        specifier: ^0.133.0
+        version: 0.133.0
       '@oxc-parser/binding-win32-x64-msvc':
-        specifier: ^0.132.0
-        version: 0.132.0
+        specifier: ^0.133.0
+        version: 0.133.0
       '@oxc-transform/binding-win32-x64-msvc':
-        specifier: ^0.132.0
-        version: 0.132.0
+        specifier: ^0.133.0
+        version: 0.133.0
       '@pinia/nuxt':
         specifier: 0.11.3
         version: 0.11.3(magicast@0.5.3)(pinia@3.0.4(typescript@5.9.3)(vue@3.5.34(typescript@5.9.3)))
@@ -73,8 +73,8 @@ importers:
         specifier: 7.0.1
         version: 7.0.1
       element-plus:
-        specifier: 2.14.0
-        version: 2.14.0(vue@3.5.34(typescript@5.9.3))
+        specifier: 2.14.1
+        version: 2.14.1(vue@3.5.34(typescript@5.9.3))
       less:
         specifier: 4.6.4
         version: 4.6.4
@@ -924,8 +924,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@oxc-minify/binding-win32-x64-msvc@0.132.0':
-    resolution: {integrity: sha512-a69yKrBl2p9O8cdAHbHih56eKhcpKJRVkRu/S+CwCdR2Zsh4nnqYIllF96Lxg3jDjRQNL3t0xZNdYBDG5Vgq+w==}
+  '@oxc-minify/binding-win32-x64-msvc@0.133.0':
+    resolution: {integrity: sha512-PJ75c6PlBx87tau0W35J43eGCv4wrDmdZ+4ddTZAnGtZqEeCVsLdmDPOEMe2DepogqlSVUF2kGBWtnFUJ5c7Rw==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [win32]
@@ -1049,8 +1049,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@oxc-parser/binding-win32-x64-msvc@0.132.0':
-    resolution: {integrity: sha512-2dapgHpA5X8DSXF4AU36hJWYf6zP0tKjMXFRAZFBD62pkevW/uhFDXoFH9Y/3Fd2EtDrw5ByNnR1wVE9X9y0SQ==}
+  '@oxc-parser/binding-win32-x64-msvc@0.133.0':
+    resolution: {integrity: sha512-kjBhCiOGSYTwDJQuuZa7a94JbP8htWu7J0X1KwH74kV2K5eYf6eyJRYmkpCDvr0XEL8tMxYI4WU1VekblFCLgg==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [win32]
@@ -1177,8 +1177,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@oxc-transform/binding-win32-x64-msvc@0.132.0':
-    resolution: {integrity: sha512-P7A4Cz/0C0Oxa2zH/oCruzA/5EHr5RRz0x6KXYz3wwhS+dFqIBxP9yo8FKjXhKXHRKa+M+QHo+bqYiqqlVsEQg==}
+  '@oxc-transform/binding-win32-x64-msvc@0.133.0':
+    resolution: {integrity: sha512-cADrfLvc/VeyvpvQS+t5ktqfyqyyGANZC5NHp++JAElacfXqq/+k8bYkjqMWzNZ3HxkJtL1qDHfZZCA9+4hlSQ==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [win32]
@@ -2192,8 +2192,8 @@ packages:
   csstype@3.2.3:
     resolution: {integrity: sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==}
 
-  dayjs@1.11.20:
-    resolution: {integrity: sha512-YbwwqR/uYpeoP4pu043q+LTDLFBLApUP6VxRihdfNTqu4ubqMlGDLd6ErXhEgsyvY0K6nCs7nggYumAN+9uEuQ==}
+  dayjs@1.11.21:
+    resolution: {integrity: sha512-98IT+HOahAisibz/yjKbzuOBwYcjJ7BCLPzARyHiyEBmRz4fatF+KPJszEHXsGYjUG234aH/cOjW1wwTbKUZlA==}
 
   db0@0.3.4:
     resolution: {integrity: sha512-RiXXi4WaNzPTHEOu8UPQKMooIbqOEyqA1t7Z6MsdxSCeb8iUC9ko3LcmsLmeUt2SM5bctfArZKkRQggKZz7JNw==}
@@ -2340,8 +2340,8 @@ packages:
   electron-to-chromium@1.5.361:
     resolution: {integrity: sha512-Q6Hts7N9FnJc5LeGRINFvLhCI9xZmNtTDe5ZbcVezQz7cU4a8Aua3GH1b8J2XY8Al9PF+OCwYqhgsOOheMdvkA==}
 
-  element-plus@2.14.0:
-    resolution: {integrity: sha512-POgH+TtoreaEKWqYYAVQyE6i8rQMEFqAEublyF29dBA5yASWPLKY6EzfeqBTr2Uv26mPss4vSrMrNPyaK7LX5w==}
+  element-plus@2.14.1:
+    resolution: {integrity: sha512-UFnm1+BckNi+azkKJ7L32q1uXs9ekr99Z9pWTQPeDR05jqEWUwQq51ro4kZMVrANbjknX3Z7ukCZwTi2T6Tr9A==}
     peerDependencies:
       vue: ^3.3.7
 
@@ -4375,8 +4375,8 @@ packages:
   vue-bundle-renderer@2.2.0:
     resolution: {integrity: sha512-sz/0WEdYH1KfaOm0XaBmRZOWgYTEvUDt6yPYaUzl4E52qzgWLlknaPPTTZmp6benaPTlQAI/hN1x3tAzZygycg==}
 
-  vue-component-type-helpers@3.2.8:
-    resolution: {integrity: sha512-9689efAXhN/EV86plgkL/XFiJSXhGtWPG6JDboZ+QnjlUWUUQrQ0ILKQtw4iQsuwIwu5k6Aw+JnehDe7161e7A==}
+  vue-component-type-helpers@3.3.3:
+    resolution: {integrity: sha512-x4nsFpy5Pe8fqPzp/5vkTPeTTDBpAx4WVtV47Ejt0+2FQrq4pRRsJs7JmYRqMFzTu/LW+pCWEjQ3YVCkPV7f9g==}
 
   vue-devtools-stub@0.1.0:
     resolution: {integrity: sha512-RutnB7X8c5hjq39NceArgXg28WZtZpGc3+J16ljMiYnFhKvd8hITxSWQSQ5bvldxMDU6gG5mkxl1MTQLXckVSQ==}
@@ -4750,11 +4750,11 @@ snapshots:
     dependencies:
       vue: 3.5.34(typescript@5.9.3)
 
-  '@element-plus/nuxt@1.1.5(@element-plus/icons-vue@2.3.2(vue@3.5.34(typescript@5.9.3)))(element-plus@2.14.0(vue@3.5.34(typescript@5.9.3)))(magicast@0.5.3)':
+  '@element-plus/nuxt@1.1.5(@element-plus/icons-vue@2.3.2(vue@3.5.34(typescript@5.9.3)))(element-plus@2.14.1(vue@3.5.34(typescript@5.9.3)))(magicast@0.5.3)':
     dependencies:
       '@element-plus/icons-vue': 2.3.2(vue@3.5.34(typescript@5.9.3))
       '@nuxt/kit': 4.3.1(magicast@0.5.3)
-      element-plus: 2.14.0(vue@3.5.34(typescript@5.9.3))
+      element-plus: 2.14.1(vue@3.5.34(typescript@5.9.3))
       magic-string: 0.30.21
       unplugin: 3.0.0
     transitivePeerDependencies:
@@ -5442,7 +5442,7 @@ snapshots:
   '@oxc-minify/binding-win32-x64-msvc@0.131.0':
     optional: true
 
-  '@oxc-minify/binding-win32-x64-msvc@0.132.0': {}
+  '@oxc-minify/binding-win32-x64-msvc@0.133.0': {}
 
   '@oxc-parser/binding-android-arm-eabi@0.131.0':
     optional: true
@@ -5508,7 +5508,7 @@ snapshots:
   '@oxc-parser/binding-win32-x64-msvc@0.131.0':
     optional: true
 
-  '@oxc-parser/binding-win32-x64-msvc@0.132.0': {}
+  '@oxc-parser/binding-win32-x64-msvc@0.133.0': {}
 
   '@oxc-project/types@0.131.0': {}
 
@@ -5576,7 +5576,7 @@ snapshots:
   '@oxc-transform/binding-win32-x64-msvc@0.131.0':
     optional: true
 
-  '@oxc-transform/binding-win32-x64-msvc@0.132.0': {}
+  '@oxc-transform/binding-win32-x64-msvc@0.133.0': {}
 
   '@parcel/watcher-android-arm64@2.5.6':
     optional: true
@@ -6558,7 +6558,7 @@ snapshots:
 
   csstype@3.2.3: {}
 
-  dayjs@1.11.20: {}
+  dayjs@1.11.21: {}
 
   db0@0.3.4: {}
 
@@ -6649,7 +6649,7 @@ snapshots:
 
   electron-to-chromium@1.5.361: {}
 
-  element-plus@2.14.0(vue@3.5.34(typescript@5.9.3)):
+  element-plus@2.14.1(vue@3.5.34(typescript@5.9.3)):
     dependencies:
       '@ctrl/tinycolor': 4.2.0
       '@element-plus/icons-vue': 2.3.2(vue@3.5.34(typescript@5.9.3))
@@ -6659,14 +6659,14 @@ snapshots:
       '@types/lodash-es': 4.17.12
       '@vueuse/core': 14.3.0(vue@3.5.34(typescript@5.9.3))
       async-validator: 4.2.5
-      dayjs: 1.11.20
+      dayjs: 1.11.21
       lodash: 4.18.1
       lodash-es: 4.18.1
       lodash-unified: 1.0.3(@types/lodash-es@4.17.12)(lodash-es@4.18.1)(lodash@4.18.1)
       memoize-one: 6.0.0
       normalize-wheel-es: 1.2.0
       vue: 3.5.34(typescript@5.9.3)
-      vue-component-type-helpers: 3.2.8
+      vue-component-type-helpers: 3.3.3
 
   emoji-regex@10.6.0: {}
 
@@ -8910,7 +8910,7 @@ snapshots:
     dependencies:
       ufo: 1.6.4
 
-  vue-component-type-helpers@3.2.8: {}
+  vue-component-type-helpers@3.3.3: {}
 
   vue-devtools-stub@0.1.0: {}
 
