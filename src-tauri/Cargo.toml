@@ -27,7 +27,7 @@ thunk-rs = { git = "https://github.com/easytier/thunk.git", default-features = f
 [dependencies]
 serde_json = "1.0.150"
 serde = { version = "1.0.217", features = ["derive"] }
-log = "0.4.30"
+log = "0.4.32"
 tauri = { version = "2.11.2", features = [ "protocol-asset",
     "tray-icon",
     "image-png",
