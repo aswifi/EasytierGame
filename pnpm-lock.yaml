@@ -22,14 +22,14 @@ importers:
         specifier: 6.14.0
         version: 6.14.0(magicast@0.5.4)(supports-color@10.2.2)(yaml@2.9.0)
       '@oxc-minify/binding-win32-x64-msvc':
-        specifier: ^0.149.0
-        version: 0.149.0
+        specifier: ^0.150.0
+        version: 0.150.0
       '@oxc-parser/binding-win32-x64-msvc':
-        specifier: ^0.149.0
-        version: 0.149.0
+        specifier: ^0.150.0
+        version: 0.150.0
       '@oxc-transform/binding-win32-x64-msvc':
-        specifier: ^0.149.0
-        version: 0.149.0
+        specifier: ^0.150.0
+        version: 0.150.0
       '@pinia/nuxt':
         specifier: 0.11.3
         version: 0.11.3(magicast@0.5.4)(pinia@3.0.4(typescript@5.9.3)(vue@3.5.41(typescript@5.9.3)))
@@ -94,11 +94,11 @@ importers:
         specifier: 8.5.28
         version: 8.5.28
       prettier:
-        specifier: 3.9.6
-        version: 3.9.6
+        specifier: 3.9.8
+        version: 3.9.8
       prettier-plugin-tailwindcss:
         specifier: 0.8.1
-        version: 0.8.1(prettier@3.9.6)
+        version: 0.8.1(prettier@3.9.8)
 
 packages:
 
@@ -675,8 +675,8 @@ packages:
   '@nuxtjs/tailwindcss@6.14.0':
     resolution: {integrity: sha512-30RyDK++LrUVRgc2A85MktGWIZoRQgeQKjE4CjjD64OXNozyl+4ScHnnYgqVToMM6Ch2ZG2W4wV2J0EN6F0zkQ==}
 
-  '@oxc-minify/binding-win32-x64-msvc@0.149.0':
-    resolution: {integrity: sha512-BDVT75aekKgVl2QuoWmFsYtGVzW7leGsokHTUX4+16/jv9JrAVTwQFneBLzOd1mKMNKcvYBLwbqmxf4v0aTzuw==}
+  '@oxc-minify/binding-win32-x64-msvc@0.150.0':
+    resolution: {integrity: sha512-il5YxayLGey1BZCBcLr5PC+6homy6qOoHcZKEVU5Cb0vUDcy5vOQTHvT6mUHGfL+igCSPw+X5MdfiiMaGhFddQ==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [win32]
@@ -808,8 +808,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@oxc-parser/binding-win32-x64-msvc@0.149.0':
-    resolution: {integrity: sha512-xFqDgKSKdY0m2EtHQL7uMuknuEGnvbtxkWllGle5hmhVe5xn5XZ0Zb9iViAsItFAf0CjSiZ5er3XqqAlr5oARA==}
+  '@oxc-parser/binding-win32-x64-msvc@0.150.0':
+    resolution: {integrity: sha512-n5YMzbqwPQqozbkrexi0lNZrUz5cnPHalYpFWe6Dau7AmKIWNo+y24IwzDuZEQtEdUHuKhXmMMih/MPjOI+CMw==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [win32]
@@ -820,8 +820,8 @@ packages:
   '@oxc-project/types@0.143.0':
     resolution: {integrity: sha512-u6JZdLBTLotrNC9Vd6vPssINdzcCzleKAH6EJKImQb7GtYvX5keN2dxkoK44stCc4tffE6QQRtZTXVSzsLUlWA==}
 
-  '@oxc-transform/binding-win32-x64-msvc@0.149.0':
-    resolution: {integrity: sha512-9rBTE4BFRgxttFQLWFIdr88YeYOU0f5ue2gvq0DoHxxpDvJZnP7uovhTUcNpln2+QmBto1ImbQBmXcOskJjBDA==}
+  '@oxc-transform/binding-win32-x64-msvc@0.150.0':
+    resolution: {integrity: sha512-YtB1uZbWc66RH/ArifCZsVlGC8UeauRJxV0qzc8MKnEGOoaaQOfeYjok6Sjf8gH8VdPKXibqnMYZo19Btn74gw==}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [win32]
@@ -3579,8 +3579,8 @@ packages:
       prettier-plugin-svelte:
         optional: true
 
-  prettier@3.9.6:
-    resolution: {integrity: sha512-OpN0zzVdiaiAhxpuuj5efpIS4sY9j7bY6uR5mnj5yPzGkdkjNKSJeUThPb60Jw29QuAZgA4o+/iB49kFiaBX6g==}
+  prettier@3.9.8:
+    resolution: {integrity: sha512-WRFq3Wn3WId7LLROfMLdH7xaFr2jR62wU8nLO6rQUOLOxNZUviyJQs1M0iIhLexSFy+L+w0ch66wtoO2jRjG0A==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -5339,7 +5339,7 @@ snapshots:
       rc9: 3.0.1
       std-env: 4.2.0
 
-  '@nuxt/vite-builder@4.5.2(4fffa411437633575ea702e02054041f)':
+  '@nuxt/vite-builder@4.5.2(0376795553c56627e1d86cb8f3dafe2a)':
     dependencies:
       '@nuxt/kit': 4.5.2(magic-string@1.1.0)(magicast@0.5.4)(oxc-parser@0.140.0)(rolldown@1.2.3)(unplugin@3.3.0(esbuild@0.28.2)(rolldown@1.2.3)(rollup@4.62.4)(vite@8.2.1(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(terser@5.49.2)(yaml@2.9.0)))
       '@vitejs/plugin-vue': 6.0.8(vite@8.2.1(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(terser@5.49.2)(yaml@2.9.0))(vue@3.5.41(typescript@5.9.3))
@@ -5367,6 +5367,7 @@ snapshots:
       std-env: 4.2.0
       ufo: 1.6.4
       unenv: 2.0.0-rc.24
+      unplugin: 3.3.0(esbuild@0.28.2)(rolldown@1.2.3)(rollup@4.62.4)(vite@8.2.1(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(terser@5.49.2)(yaml@2.9.0))
       vite: 8.2.1(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(terser@5.49.2)(yaml@2.9.0)
       vite-node: 6.0.0(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(terser@5.49.2)(yaml@2.9.0)
       vite-plugin-checker: 0.14.5(typescript@5.9.3)(vite@8.2.1(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(terser@5.49.2)(yaml@2.9.0))
@@ -5378,8 +5379,11 @@ snapshots:
       rollup-plugin-visualizer: 7.0.1(rolldown@1.2.3)(rollup@4.62.4)
     transitivePeerDependencies:
       - '@biomejs/biome'
+      - '@farmfe/core'
+      - '@rspack/core'
       - '@types/node'
       - '@vitejs/devtools'
+      - bun-types-no-globals
       - esbuild
       - eslint
       - less
@@ -5389,6 +5393,7 @@ snapshots:
       - optionator
       - oxc-parser
       - oxlint
+      - rollup
       - sass
       - sass-embedded
       - stylelint
@@ -5398,8 +5403,9 @@ snapshots:
       - terser
       - tsx
       - typescript
-      - unplugin
+      - unloader
       - vue-tsc
+      - webpack
       - yaml
 
   '@nuxtjs/tailwindcss@6.14.0(magicast@0.5.4)(supports-color@10.2.2)(yaml@2.9.0)':
@@ -5426,7 +5432,7 @@ snapshots:
       - tsx
       - yaml
 
-  '@oxc-minify/binding-win32-x64-msvc@0.149.0': {}
+  '@oxc-minify/binding-win32-x64-msvc@0.150.0': {}
 
   '@oxc-parser/binding-android-arm-eabi@0.140.0':
     optional: true
@@ -5492,14 +5498,14 @@ snapshots:
   '@oxc-parser/binding-win32-x64-msvc@0.140.0':
     optional: true
 
-  '@oxc-parser/binding-win32-x64-msvc@0.149.0': {}
+  '@oxc-parser/binding-win32-x64-msvc@0.150.0': {}
 
   '@oxc-project/types@0.140.0':
     optional: true
 
   '@oxc-project/types@0.143.0': {}
 
-  '@oxc-transform/binding-win32-x64-msvc@0.149.0': {}
+  '@oxc-transform/binding-win32-x64-msvc@0.150.0': {}
 
   '@parcel/watcher-android-arm64@2.5.6':
     optional: true
@@ -7756,7 +7762,7 @@ snapshots:
       '@nuxt/nitro-server': 4.5.2(e963d276dd8ef42afe51d0fa4a1d6649)
       '@nuxt/schema': 4.5.2
       '@nuxt/telemetry': 2.8.0(@nuxt/kit@4.5.2(magic-string@1.1.0)(magicast@0.5.4)(oxc-parser@0.140.0)(rolldown@1.2.3)(unplugin@3.3.0(esbuild@0.28.2)(rolldown@1.2.3)(rollup@4.62.4)(vite@8.2.1(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(terser@5.49.2)(yaml@2.9.0))))
-      '@nuxt/vite-builder': 4.5.2(4fffa411437633575ea702e02054041f)
+      '@nuxt/vite-builder': 4.5.2(0376795553c56627e1d86cb8f3dafe2a)
       '@unhead/vue': 3.3.1(@oxc-project/types@0.143.0)(@vitejs/devtools-kit@0.4.10(cac@7.0.0)(srvx@0.11.22)(typescript@5.9.3)(vite@8.2.1(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(terser@5.49.2)(yaml@2.9.0)))(esbuild@0.28.2)(lightningcss@1.33.0)(oxc-parser@0.140.0)(rolldown@1.2.3)(rollup@4.62.4)(vite@8.2.1(esbuild@0.28.2)(jiti@2.7.0)(less@4.9.1(supports-color@10.2.2))(terser@5.49.2)(yaml@2.9.0))(vue@3.5.41(typescript@5.9.3))
       '@vue/shared': 3.5.41
       chokidar: 5.0.0
@@ -8263,11 +8269,11 @@ snapshots:
 
   powershell-utils@0.1.0: {}
 
-  prettier-plugin-tailwindcss@0.8.1(prettier@3.9.6):
+  prettier-plugin-tailwindcss@0.8.1(prettier@3.9.8):
     dependencies:
-      prettier: 3.9.6
+      prettier: 3.9.8
 
-  prettier@3.9.6: {}
+  prettier@3.9.8: {}
 
   pretty-bytes@7.1.1: {}
 
